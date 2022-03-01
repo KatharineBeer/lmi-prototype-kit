@@ -85,8 +85,6 @@ Web design group
     color: white;
   }
   </style>
-​
-​
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
 ​
@@ -145,9 +143,9 @@ Web design group
                 <li>level of jobs are available, such as entry level or senior positions</li>
                 <li>qualifications or skills you’ll need</li>
               </ul>
-              <button id="btn1" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart(); changeTable(); changeButton()" >Change to chart view
+              <button id="btn1" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart(); changeTable(); changeButton()" >Change to table and accessible view
               </button>
-            <div id="barchart1" style="display: none;">
+            <div id="barchart1" >
               <table class="bar-chart">
                 <thead>
                   <tr>
@@ -195,8 +193,8 @@ Web design group
                 </tbody>
               </table>
             </div>
-            <div id="table1" >
-              <table class="govuk-table">
+            <div id="table1" style="display: none;" >
+              <table class="govuk-table" data-module="moj-sortable-table">
                 <thead class="govuk-table__head">
                   <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header">Area of England</th>
@@ -247,8 +245,10 @@ Web design group
               <p class="govuk-body">This is a list of sectors or industries that currently employ the most chartered and certified accountants. 
                 </p>
                 <p class="govuk-body">There could be lots of people working in an industry which you did not associate with chartered and certified accountants. You might find more job opportunities if you <a href="">look for vacancies in the top industries</a>.</p>
-                <button id="btn2" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart2(); changeTable2(); changeButton2()" >Change to chart view</button>
-                <div id= "barchart2" style="display: none;">
+              
+                <button id="btn2" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart2(); changeTable2(); changeButton2()" >Change to table and accessible view
+                </button>
+ 			<div id= "barchart2">
               <table class="bar-chart" >
             <thead>
               <tr>
@@ -297,7 +297,9 @@ Web design group
             </tbody>
           </table>
           </div>
-          <div id="table2">
+
+            <div id="table2" style="display: none;">
+              <table class="govuk-table" data-module="moj-sortable-table">
             <table class="govuk-table">
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -380,66 +382,68 @@ Web design group
     </div>
   </div>
 </div>
+
 <script>
-function changeChart() {
-  var x = document.getElementById("barchart1");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+  function changeChart() {
+    var x = document.getElementById("table1");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
   }
-}
-</script>
-<script>
-function changeTable() {
-  var y = document.getElementById("table1");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
+  </script>
+  <script>
+  function changeTable() {
+    var y = document.getElementById("barchart1");
+    if (y.style.display === "none") {
+      y.style.display = "block";
+    } else {
+      y.style.display = "none";
+    }
   }
-}
-</script>
-<script>
-function changeButton() {
-  var z = document.getElementById("btn1");
-  if (z.innerHTML === "Change to table and accessible view") {
-    z.innerHTML = "Change to chart view";
-  } else {
-    z.innerHTML = "Change to table and accessible view";
+  </script>
+  <script>
+  function changeButton() {
+    var z = document.getElementById("btn1");
+    if (z.innerHTML === "Change to chart view") {
+      z.innerHTML = "Change to table and accessible view";
+    } else {
+      z.innerHTML = "Change to chart view";
+    }
   }
-}
-</script>
-<script>
-function changeChart2() {
-  var a = document.getElementById("barchart2");
-  if (a.style.display === "block") {
-    a.style.display = "none";
-  } else {
-    a.style.display = "block";
+  </script>
+  <script>
+  function changeChart2() {
+    var a = document.getElementById("table2");
+    if (a.style.display === "block") {
+      a.style.display = "none";
+    } else {
+      a.style.display = "block";
+    }
   }
-}
-</script>
-<script>
-function changeTable2() {
-  var b = document.getElementById("table2");
-  if (b.style.display === "none") {
-    b.style.display = "block";
-  } else {
-    b.style.display = "none";
+  </script>
+  <script>
+  function changeTable2() {
+    var b = document.getElementById("barchart2");
+    if (b.style.display === "none") {
+      b.style.display = "block";
+    } else {
+      b.style.display = "none";
+    }
   }
-}
-</script>
-<script>
-function changeButton2() {
-  var c = document.getElementById("btn2");
- if (c.innerHTML === "Change to table and accessible view") {
-    c.innerHTML = "Change to chart view";
-  } else {
-    c.innerHTML = "Change to table and accessible view";
+  </script>
+  <script>
+  function changeButton2() {
+    var c = document.getElementById("btn2");
+   if (c.innerHTML === "Change to chart view") {
+      c.innerHTML = "Change to table and accessible view";
+    } else {
+      c.innerHTML = "Change to chart view";
+    }
   }
-}
-</script>
+  </script>
+  
 
   
 {% endblock %}
