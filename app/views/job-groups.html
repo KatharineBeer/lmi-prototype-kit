@@ -143,7 +143,7 @@ Job Group page
                 <li>level of jobs are available, such as entry level or senior positions</li>
                 <li>qualifications or skills you’ll need</li>
               </ul>
-              <button id="btn1" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart(); changeTable(); changeButton()" >Change to table and accessible view
+              <button id="btn1" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart(); changeTable(); changeButton()" >Change from chart to table view
               </button>
             <div id="barchart1" >
               <table class="bar-chart">
@@ -246,7 +246,7 @@ Job Group page
                 </p>
                 <p class="govuk-body">There could be lots of people working in an industry which you did not associate with chartered and certified accountants. You might find more job opportunities if you <a href="">look for vacancies in the top industries</a>.</p>
               
-                <button id="btn2" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart2(); changeTable2(); changeButton2()" >Change to table and accessible view
+                <button id="btn2" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="changeChart2(); changeTable2(); changeButton2()" >Change from chart to table view
                 </button>
  			<div id= "barchart2">
               <table class="bar-chart" >
@@ -355,7 +355,6 @@ Job Group page
                 <li>search for jobs</li>
                 <li>research an industry or area you’re interested in working in</li>
               </ul>
-              <hr>
               <h2 class="govuk-heading-m govuk-!-margin-top-5">Speak to an adviser</h2>
               <p class="govuk-body">Working out what these numbers mean and how they apply to your situation may not be easy.</p>
               <p class="govuk-body">Careers advisers are experienced in interpreting this data and can help you work out what’s best for you.</p>
@@ -407,9 +406,9 @@ Job Group page
   function changeButton() {
     var z = document.getElementById("btn1");
     if (z.innerHTML === "Change to chart view") {
-      z.innerHTML = "Change to table and accessible view";
+      z.innerHTML = "Change from table view to chart view";
     } else {
-      z.innerHTML = "Change to chart view";
+      z.innerHTML = "Change from table to chart view";
     }
   }
   </script>
@@ -437,9 +436,9 @@ Job Group page
   function changeButton2() {
     var c = document.getElementById("btn2");
    if (c.innerHTML === "Change to chart view") {
-      c.innerHTML = "Change to table and accessible view";
+      c.innerHTML = "Change from table to chart view";
     } else {
-      c.innerHTML = "Change to chart view";
+      c.innerHTML = "Change from table to chart view";
     }
   }
   </script>
